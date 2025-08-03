@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>All Teachers</title></head>
+<body>
+  <h1>All Teachers</h1>
+  <ul>
+    {{ range .Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>  {{ .Params.position }}
+      </li>
+    {{ end }}
+  </ul>
+  <a href="/">← Back to Home</a>
+</body>
+</html>

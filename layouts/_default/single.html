@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ .Title }}</title>
+</head>
+<body>
+  <h1>{{ .Title }}</h1>
+
+  {{ if .Params.subject }}
+    <p><strong>Subject:</strong> {{ .Params.subject }}</p>
+    <p><strong>Experience:</strong> {{ .Params.experience }}</p>
+  {{ end }}
+
+  {{ if .Params.class }}
+    <p><strong>Class:</strong> {{ .Params.class }}</p>
+    <p><strong>Roll Number:</strong> {{ .Params.roll }}</p>
+    <p><strong>Favorite Subject:</strong> {{ .Params.favourite_subject }}</p>
+  {{ end }}
+
+  <p><strong>Email:</strong> {{ .Params.email }}</p>
+
+  {{ if .Params.phone }}
+    <p><strong>Phone:</strong> {{ .Params.phone }}</p>
+  {{ end }}
+
+  <hr>
+  <div>
+    {{ .Content }}
+  </div>
+
+  <p><a href="/">← Back to Home</a></p>
+</body>
+</html>
